@@ -2,14 +2,15 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <title>ソルスティスのポートフォリオサイト</title>
 </head>
 <body>
   <h1>ソルスティスのポートフォリオサイト</h1>
-  <p>当ページは、サーバーサイドを主軸としてエンジニアを志望している私がこれまで実装したサイトの簡単な紹介をするページです。</p>
-  <p>目次</p>
+  <p>当ページは、サーバーサイドを主軸としてITエンジニアを志望する私が習得している技術を説明するページです。</p>
+  <hr>
+  <h5>目次</h5>
   <ol>
     <li>自己紹介</li>
     <li>スキル</li>
@@ -19,87 +20,101 @@
   <h3>自己紹介</h3>
   <p>
     非情報系の大学院生(22卒)で、ITエンジニアを志望しています。<br>
-    これまでサーバーサイドを主軸とした学習を進めてきました。
+    これまでサーバーサイドを主軸とした学習を進めてきました。<br>
+    ぼんやりとした要望を具体的なコーディングに落とし込み、実装するまでの実行力を意識しています。
   </p>
-  <ul>
-    <li>詳細</li>
-    <li>Web上のユーザー名:ソルスティス</li>
-    <li>実名のイニシャル:H.N</li>
-    <li>年齢:24歳</li>
-    <li>現在の所属:北海道大学大学院工学院</li>
-  </ul>
+  <table border="1">
+    <tbody>
+      <tr>
+        <th>Web上のユーザー名</th>
+        <td>ソルスティス</td>
+      </tr>
+      <tr>
+        <th>実名のイニシャル</th>
+        <td>H.N</td>
+      </tr>
+      <tr>
+        <th>年齢</th>
+        <td>24歳</td>
+      </tr>
+      <tr>
+        <th>現在の所属</th>
+        <td>北海道大学大学院工学院</td>
+      </tr>
+    </tbody>
+  </table>
   <hr>
   <h3>スキル</h3>
   <p>
     <a href="https://www.nnn.ed.nico/pages/programming/">N予備校のプログラミング入門Webアプリコース</a>
     を学習し、そこで学んだ技術を元に
-    <a href="https://iidxmm.solstice-dev.net/">Webサイト</a>
+    <a href="https://iidxmm.solstice-dev.net/">Webサイト(IIDXメソッドマネージャー)</a>
     を制作しました。
-  </p>
-  <ul>
-    <li>詳細</li>
-    <li>主な使用言語:Node.js(Express.js)・Javascript(jQuery含む)・pug</li>
-    <li>認証:ローカル認証(Bcript使用)・OAuth認証</li>
-    <li>データベース:PostgreSQL(Node.js上での利用のため、sequelizeを使用)</li>
-    <li>PaaS:Heroku(SSL化・AWS-S3との連携含む)</li>
-    <li>その他技術:Mailgun・Bootstrap・webpack・簡単な統計処理</li>
-    <li>環境:Linux(Ubuntu)・VSCode</li>
-  </ul>
-  <hr>
-  <h3>制作物</h3>
-  <h5><a href="https://iidxmm.solstice-dev.net/">IIDXメソッドマネージャー</a></h5>
-  <p>
-    株式会社コナミから提供されている音楽ゲーム
-    <a href="https://p.eagate.573.jp/game/2dx/28/top/index.html">BeatmaniaIIDX</a>
-    の管理ツールを提供するサイトです。
     <br>
-    制作目的は、N予備校で習得した技術のアウトプットのほか、ゲームユーザーとしての利用も兼ねています。
-    <br>
+    以下に習得した主な技術を記載します。
   </p>
-  <table>
-    <caption>このサイトで使用した技術</caption>
+  <table border="1">
     <thead>
       <tr>
         <th>項目</th>
-        <th>N予備校で習得したもの</th>
-        <th>追加で習得したもの</th>
+        <th>N予備校で学習して活用したもの</th>
+        <th>追加で学習したものなど</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <th>サーバーサイド言語</th>
         <td>Node.js(Express.js)</td>
-        <td>追加なし</td>
+        <td>なし</td>
       </tr>
       <tr>
         <th>フロントエンド</th>
         <td>Javascript(jQuary使用)</td>
-        <td>追加なし</td>
+        <td>なし</td>
       </tr>
       <tr>
         <th>データベース</th>
-        <td>PostgreSQL(サーバーサイドからはsequelizeで操作)</td>
-        <td>追加なし</td>
+        <td>PostgreSQL(sequelizeで操作)</td>
+        <td>軽微な調整</td>
       </tr>
       <tr>
         <th>認証</th>
-        <td>ローカル認証</td>
-        <td>追加なし</td>
+        <td>ローカル認証(bcrypt使用)</td>
+        <td>サインアップ時、Mailgunによるメール送信サービスをアドレスの確認に利用</td>
       </tr>
       <tr>
         <th>PaaS</th>
         <td>Heroku</td>
-        <td>Herokuのドキュメントで想定されている独自ドメイン取得・SSL化・AWS-S3との連携を実装</td>
+        <td>Herokuのドキュメントで想定されている、カスタムドメインの適用・AWS-S3との連携を実装</td>
       </tr>
       <tr>
         <th>その他</th>
-        <td>Mailgun・Bootstrap・webpack</td>
-        <td>正規分布を利用した処理の実装</td>
+        <td>Bootstrap・webpack・脆弱性対策</td>
+        <td>数学的知識の活用</td>
       </tr>
     </tbody>
   </table>
+  <hr>
+  <h3>制作物</h3>
+  <!--以下の項目はHTMLの構造を改善する余地あり-->
+  <h5><a href="https://iidxmm.solstice-dev.net/">IIDXメソッドマネージャー</a></h5>
+  <p>
+    株式会社コナミから提供されている音楽ゲーム
+    <a href="https://p.eagate.573.jp/game/2dx/28/top/index.html">BeatmaniaIIDX</a>
+    のプレイデータを管理するツールを提供するサイトです。
+    <br>
+    非公式のツールサイトは数多くありますが、そこから目標を立てることまでカバーしていることが本サイトの特徴といえます。
+    <br>
+    主な機能はサインアップ・サインイン・データの入力・リスト出力・ビンゴ機能です。
+    <br>
+    制作期間は3ヶ月です。
+    <br>
+    <!-- pptなどで詳細な機能を記入？-->
+  </p>
   <p>
     〜ブラウザからのテスト方法〜
+    <br>
+    <!--Youtubeでテスト内容を表示-->
     <br>
     (サインアップをテストする場合、各人で用意されたアドレスからテストアカウント※を作成してください。)
     <br>
@@ -128,20 +143,28 @@
   <p>
     〜今後の実装予定〜
     <br>
-    ・基本的な機能のバグ修正
+    ・ビンゴ機能のバグ修正
+    <br>
+    ・リスト出力のソート導入
     <br>
     ・例外処理関係の充実
     <br>
-    ・アカウント周りの入力
+    ・アカウント情報の更新ページ作成
     <br>
-    ・不具合等報告フォーム
+    ・不具合等報告フォーム作成
   </p>
   <br>
   <h5>当サイト</h5>
   <p>
     自己紹介とこれまでの制作物を通した技術レベルの解説を目的としています。
     <br>
-    今後、内容に関連するファイルのアップロード等を予定
+    サイトそのものの技術としてはGithubPages・Bootstrapを利用しています。
+    <br>
+    制作期間は10時間です。
   </p>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </body>
 </html>
